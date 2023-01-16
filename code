@@ -11,16 +11,14 @@ namespace jun1
         static void Main(string[] args)
         {
             string message;
-            int numberOfMessages;
 
             Console.WriteLine("Введите сообщение");
             message = Console.ReadLine();
             Console.WriteLine("Сколько раз повторить?");
-            numberOfMessages = Convert.ToInt32(Console.ReadLine());
-            while (numberOfMessages > 0)
+
+            for (int numberOfMessages = Convert.ToInt32(Console.ReadLine()); numberOfMessages >= 1; numberOfMessages--)
             {
                 Console.WriteLine(message);
-                numberOfMessages--;
             }
         }
     }
